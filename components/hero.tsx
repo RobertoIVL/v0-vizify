@@ -1,5 +1,5 @@
 "use client"
-
+import React from "react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { FileText, Sparkles } from "lucide-react"
@@ -60,3 +60,5 @@ export default function Hero() {
     </div>
   )
 }
+
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>

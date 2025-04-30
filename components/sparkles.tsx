@@ -71,7 +71,6 @@ export const SparklesCore = ({
         if (this.y < 0) this.y = canvas.height
 
         // Mouse interaction
-        /*
         const dx = mousePosition.x - this.x
         const dy = mousePosition.y - this.y
         const distance = Math.sqrt(dx * dx + dy * dy)
@@ -79,8 +78,7 @@ export const SparklesCore = ({
           const angle = Math.atan2(dy, dx)
           this.x -= Math.cos(angle) * 1
           this.y -= Math.sin(angle) * 1
-        }
-          */
+        }   
       }
 
       draw() {
