@@ -13,18 +13,18 @@ export function FeaturesSection() {
     },
     {
       icon: <Shield className="h-10 w-10 text-purple-500" />,
-      title: "100% Seguro",
-      description: "Nosso sistema é totalmente seguro e não viola os termos de serviço da Steam.",
+      title: "Acesso total a conta fornecida",
+      description: "Nosso sistema fornece a conta com o acesso ao jogo",
     },
     {
       icon: <Rocket className="h-10 w-10 text-purple-500" />,
-      title: "Desempenho Otimizado",
-      description: "Jogue sem impacto no desempenho, como se o jogo estivesse instalado localmente.",
+      title: "Otimizado para Steam",
+      description: "Instalação fácil, rápida e prática.",
     },
     {
       icon: <Sparkles className="h-10 w-10 text-purple-500" />,
-      title: "Novos Lançamentos",
-      description: "Acesso a novos lançamentos no mesmo dia em que são disponibilizados na Steam.",
+      title: "Grandes jogos",
+      description: "Acesso a jogos aclamados pelos jogadores e críticos.",
     },
     {
       icon: <Clock className="h-10 w-10 text-purple-500" />,
@@ -35,6 +35,7 @@ export function FeaturesSection() {
       icon: <Globe className="h-10 w-10 text-purple-500" />,
       title: "Multiplayer Global",
       description: "Conecte-se com jogadores do mundo todo em todos os jogos multiplayer.",
+      maintenance: true,
     },
   ]
 
