@@ -1,15 +1,15 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Zap, Shield, Rocket, Sparkles, Clock, Globe } from "lucide-react"
+import { Zap, Shield, Rocket, Sparkles, Clock, Globe, Database } from "lucide-react"
 import { FloatingPaper } from "@/components/floating-paper"
 
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Zap className="h-10 w-10 text-purple-500" />,
-      title: "Acesso Instantâneo",
-      description: "Tenha acesso imediato a milhares de jogos sem espera ou downloads extensos.",
+      icon: <Database className="h-10 w-10 text-purple-500" />,
+      title: "Vasta Biblioteca",
+      description: "Tenha acesso milhares de jogos pagos da biblioteca Steam.",
     },
     {
       icon: <Shield className="h-10 w-10 text-purple-500" />,
