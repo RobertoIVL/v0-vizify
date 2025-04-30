@@ -23,7 +23,7 @@ export const SparklesCore = ({
   particleColor = "#FFFFFF",
 }: SparklesProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  //const mousePosition = useMousePosition()
+  const mousePosition = useMousePosition()
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 })
 
   useEffect(() => {
@@ -71,6 +71,7 @@ export const SparklesCore = ({
         if (this.y < 0) this.y = canvas.height
 
         // Mouse interaction
+        /*
         const dx = mousePosition.x - this.x
         const dy = mousePosition.y - this.y
         const distance = Math.sqrt(dx * dx + dy * dy)
@@ -79,6 +80,7 @@ export const SparklesCore = ({
           this.x -= Math.cos(angle) * 1
           this.y -= Math.sin(angle) * 1
         }
+          */
       }
 
       draw() {
