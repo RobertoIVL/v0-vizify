@@ -17,17 +17,17 @@ export function ExamplesSection() {
         {
           name: "Cyberpunk 2077",
           image: "/placeholder.svg?height=200&width=350",
-          description: "Explore Night City com gráficos impressionantes e sem necessidade de download.",
+          description: "Explore Night City com gráficos impressionantes.",
         },
         {
           name: "Red Dead Redemption 2",
           image: "/placeholder.svg?height=200&width=350",
-          description: "Experimente o vasto mundo aberto do oeste selvagem sem ocupar espaço no seu HD.",
+          description: "Experimente o vasto mundo aberto do oeste selvagem",
         },
         {
           name: "Elden Ring",
           image: "/placeholder.svg?height=200&width=350",
-          description: "Enfrente os desafios deste RPG premiado com acesso instantâneo.",
+          description: "Enfrente os desafios deste RPG soulslike.",
         },
       ],
     },
@@ -94,8 +94,7 @@ export function ExamplesSection() {
             de Jogos
           </h1>
           <p className="text-gray-400 text-xl max-w-3xl mx-auto">
-            Veja alguns dos milhares de jogos disponíveis em nossa plataforma. Todos prontos para jogar
-            instantaneamente.
+            Veja alguns dos milhares de jogos disponíveis em nossa plataforma. 
           </p>
         </motion.div>
 
