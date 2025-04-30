@@ -32,7 +32,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-400 text-xl mb-8 max-w-2xl mx-auto"
           >
-            Tenha milhares jogos em sua conta Steam por apenas uma fração do preço.
+            Tenha milhares de jogos em sua conta Steam por apenas uma fração do preço.
           </motion.p>
 
           <motion.div
