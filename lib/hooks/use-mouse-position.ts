@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react"
 
 export function useMousePosition() {
@@ -19,4 +21,3 @@ export function useMousePosition() {
 
   return mousePosition
 }
-

@@ -15,21 +15,21 @@ export default function Navbar() {
     >
       <Link href="/" className="flex items-center space-x-2">
         <Bot className="w-8 h-8 text-purple-500" />
-        <span className="text-white font-medium text-xl">ResearchAI</span>
+        <span className="text-white font-medium text-xl">L4IV</span>
       </Link>
 
       <div className="hidden md:flex items-center space-x-8">
-        <NavLink href="/features">Features</NavLink>
-        <NavLink href="/how-it-works">How it Works</NavLink>
-        <NavLink href="/examples">Examples</NavLink>
-        <NavLink href="/pricing">Pricing</NavLink>
+        <NavLink href="/features">Novidades</NavLink>
+        <NavLink href="/how-it-works">Como funciona?</NavLink>
+        <NavLink href="/examples">Exemplos</NavLink>
+        <NavLink href="/pricing">Preços</NavLink>
       </div>
 
       <div className="hidden md:flex items-center space-x-4">
         <Button variant="ghost" className="text-white hover:text-purple-400">
-          Sign In
+          Cadastrar
         </Button>
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white">Get Started</Button>
+        <Button className="bg-purple-600 hover:bg-purple-700 text-white">Logar</Button>
       </div>
 
       <Button variant="ghost" size="icon" className="md:hidden text-white">
@@ -47,4 +47,3 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
     </Link>
   )
 }
-
