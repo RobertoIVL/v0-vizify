@@ -75,6 +75,12 @@ export function FeaturesSection() {
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>
+              {feature.maintenance && (
+                <div className="mt-2 inline-flex items-center rounded-full bg-yellow-500/20 px-2.5 py-0.5 text-xs font-medium text-yellow-400">
+                  <span className="mr-1 h-1.5 w-1.5 rounded-full bg-yellow-400"></span>
+                  Em manutenção
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
