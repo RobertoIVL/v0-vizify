@@ -23,7 +23,7 @@ export const SparklesCore = ({
   particleColor = "#FFFFFF",
 }: SparklesProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const mousePosition = useMousePosition()
+  //const mousePosition = useMousePosition()
   const [dimensions, setDimensions] = useState({ width: 1200, height: 800 })
 
   useEffect(() => {
