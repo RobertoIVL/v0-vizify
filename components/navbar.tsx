@@ -5,7 +5,7 @@ import { Bot, Menu } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { useState } from "react" // Import useState para gerenciar estado
-import type React from "react"
+import Modal from "@/components/ui/modal" // Supondo que exista um componente Modal reutilizável
 
 export default function Navbar() {
   const [isRegisterOpen, setRegisterOpen] = useState(false)
@@ -34,13 +34,13 @@ export default function Navbar() {
           <Button
             variant="ghost"
             className="text-white hover:text-purple-400"
-            onClick={() => setRegisterOpen(true)} // Abre o pop-up de cadastro
+            onClick={() => setRegisterOpen(true)} // Abre o popup de cadastro
           >
             Cadastrar
           </Button>
           <Button
             className="bg-purple-600 hover:bg-purple-700 text-white"
-            onClick={() => setLoginOpen(true)} // Abre o pop-up de login
+            onClick={() => setLoginOpen(true)} // Abre o popup de login
           >
             Logar
           </Button>
@@ -51,53 +51,31 @@ export default function Navbar() {
         </Button>
       </motion.nav>
 
+      {/* Popup de Cadastro */}
       {isRegisterOpen && (
-        <Popup onClose={() => setRegisterOpen(false)}>
+        <Modal onClose={() => setRegisterOpen(false)}>
           <h2 className="text-xl font-bold mb-4">Cadastro</h2>
           {/* Formulário de cadastro */}
           <form>
-            <input
-              type="text"
-              placeholder="Nome"
-              className="w-full mb-2 p-2 border border-gray-300 rounded"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full mb-2 p-2 border border-gray-300 rounded"
-            />
-            <input
-              type="password"
-              placeholder="Senha"
-              className="w-full mb-4 p-2 border border-gray-300 rounded"
-            />
-            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
-              Cadastrar
-            </Button>
+            <input type="text" placeholder="Nome" className="mb-2 w-full p-2 border rounded" />
+            <input type="email" placeholder="Email" className="mb-2 w-full p-2 border rounded" />
+            <input type="password" placeholder="Senha" className="mb-4 w-full p-2 border rounded" />
+            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">Cadastrar</Button>
           </form>
-        </Popup>
+        </Modal>
       )}
 
+      {/* Popup de Login */}
       {isLoginOpen && (
-        <Popup onClose={() => setLoginOpen(false)}>
+        <Modal onClose={() => setLoginOpen(false)}>
           <h2 className="text-xl font-bold mb-4">Login</h2>
           {/* Formulário de login */}
           <form>
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full mb-2 p-2 border border-gray-300 rounded"
-            />
-            <input
-              type="password"
-              placeholder="Senha"
-              className="w-full mb-4 p-2 border border-gray-300 rounded"
-            />
-            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">
-              Logar
-            </Button>
+            <input type="email" placeholder="Email" className="mb-2 w-full p-2 border rounded" />
+            <input type="password" placeholder="Senha" className="mb-4 w-full p-2 border rounded" />
+            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white">Logar</Button>
           </form>
-        </Popup>
+        </Modal>
       )}
     </>
   )
@@ -109,21 +87,5 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
       {children}
       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-500 transition-all group-hover:w-full" />
     </Link>
-  )
-}
-
-function Popup({ children, onClose }: { children: React.ReactNode; onClose: () => void }) {
-  return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded shadow-lg w-96">
-        <button
-          onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
-        >
-          ✕
-        </button>
-        {children}
-      </div>
-    </div>
   )
 }
