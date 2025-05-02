@@ -1,13 +1,32 @@
 "use client"
 
+import { Bot } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Link from "next/link"
+import type React from "react"
+
+export default function Navbar() {
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 backdrop-blur-sm border-b border-white/10 z-50"
+    >
+      <Link href="/" className="flex items-center space-x-2">
+        <Bot className="w-8 h-8 text-purple-500" />
+        <span className="text-white font-medium text-xl">L4IV</span>
+      </Link>
+    </motion.nav>
+  )
+}
 
 export function LoginForm() {
   return (
-    <div className="relative min-h-[calc(100vh-76px)] flex items-center justify-center bg-gradient-to-r from-purple-400 to-pink-600">
-      <div className="container mx-auto px-6 relative z-10">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-400 to-pink-600">
+      <Navbar />
+      <div className="container mx-auto px-6 relative z-10 mt-20">
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

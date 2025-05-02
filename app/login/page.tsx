@@ -2,9 +2,16 @@ import { LoginForm } from "@/components/login-form"
 
 export default function LoginPage() {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center bg-muted p-6 md:p-10">
-      <div className="w-full max-w-sm md:max-w-3xl">
-        <LoginForm />
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-pink-600">
+      {/* Floating papers background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden">
+              <LoginForm />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

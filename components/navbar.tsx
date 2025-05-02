@@ -23,17 +23,14 @@ export default function Navbar() {
         <NavLink href="/how-it-works">Como funciona?</NavLink>
         <NavLink href="/examples">Exemplos</NavLink>
         <NavLink href="/pricing">Preços</NavLink>
+        <NavLink href="/login">login</NavLink>
       </div>
 
       <div className="hidden md:flex items-center space-x-4">
-        <link href="/login">
         <Button variant="ghost" className="text-white hover:text-purple-400">
           Cadastrar
         </Button>
-        </link>
-        <link href="/login">
         <Button className="bg-purple-600 hover:bg-purple-700 text-white">Logar</Button>
-        </link>
       </div>
 
       <Button variant="ghost" size="icon" className="md:hidden text-white">
